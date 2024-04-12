@@ -173,9 +173,9 @@ bool search_task(TaskManager* manager) {
 
 //saves the list do the text file -By Alaba
 void save_tasks(TaskManager* manager) {
-    FILE* file = fopen("tasks.txt", "w");
+    FILE* file = fopen(FILENAME, "w");
     if (file != NULL) {
-        fwrite(manager, sizeof(TaskManager), 1, file);
+        fwrite(manager, sizeof(TaskManager), ONE, file);
         fclose(file);
     }
     else {
@@ -183,11 +183,13 @@ void save_tasks(TaskManager* manager) {
     }
 }
 
+
+
 // loads the list from the text file -By Alaba
 void load_tasks(TaskManager* manager) {
-    FILE* file = fopen("tasks.txt", "r");
+    FILE* file = fopen(FILENAME, "r");
     if (file != NULL) {
-        fread(manager, sizeof(TaskManager), 1, file);
+        fread(manager, sizeof(TaskManager), ONE, file);
         fclose(file);
     }
     else {

@@ -3,6 +3,8 @@
 #define MAX_TITLE_LENGTH 50
 #define MAX_DESCRIPTION_LENGTH 100
 #define MAX_TASKS 100
+#define ONE         1
+#define FILENAME        "todoManager.txt"
 #include<stdbool.h>
 
 typedef struct {
@@ -24,7 +26,6 @@ void display_single_task(TaskManager* manager);
 void display_range_tasks(TaskManager* manager);
 void display_all_tasks(TaskManager* manager);
 bool search_task(TaskManager* manager);
-void displaySingleTask(const Task* task);
 void save_tasks(TaskManager* manager);
 void load_tasks(TaskManager* manager);
  
