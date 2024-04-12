@@ -17,7 +17,8 @@ void print_menu() {
     printf("5. Display range of tasks\n");
     printf("6. Display all tasks\n");
     printf("7. Search for a task\n");
-    printf("8. Exit\n");
+    printf("8. Reorder tasks\n");
+    printf("9. Exit\n");
     printf("Enter your choice: ");
 }
 
@@ -47,6 +48,9 @@ void process_choice(TaskManager* manager, int choice) {
         }
         break;
     case 8:
+        reorder_tasks(manager);
+        break;
+    case 9:
         printf("Exiting...\n");
         save_tasks(manager); // Save before exit (I really had a lot of Problem Implementiong this
         // Please no one should move it from here) 

@@ -26,6 +26,8 @@ void display_single_task(TaskManager* manager);
 void display_range_tasks(TaskManager* manager);
 void display_all_tasks(TaskManager* manager);
 bool search_task(TaskManager* manager);
+void reorder_tasks(TaskManager* manager);
+void swap_tasks(TaskManager* manager, int index1, int index2);
 void save_tasks(TaskManager* manager);
 void load_tasks(TaskManager* manager);
  

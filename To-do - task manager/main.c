@@ -22,7 +22,7 @@ int main() {
         print_menu();
         scanf("%d", &choice);
         process_choice(&manager, choice);
-    } while (choice != 8);
+    } while (choice != 9);
 
     return 0;
 }

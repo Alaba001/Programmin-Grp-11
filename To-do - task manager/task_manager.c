@@ -171,6 +171,37 @@ bool search_task(TaskManager* manager) {
     return found;
 }
 
+void reorder_tasks(TaskManager* manager) {
+    if (manager->num_tasks <= 1) {
+        printf("Not enough tasks to reorder.\n");
+        return;
+    }
+
+    int index1, index2;
+    printf("Enter the indices of the tasks to swap (1-%d): ", manager->num_tasks);
+    scanf("%d %d", &index1, &index2);
+    if (index1 >= 1 && index1 <= manager->num_tasks &&
+        index2 >= 1 && index2 <= manager->num_tasks) {
+        swap_tasks(manager, index1 - 1, index2 - 1);
+    }
+    else {
+        printf("Invalid task indices.\n");
+    }
+}
+
+void swap_tasks(TaskManager* manager, int index1, int index2) {
+    if (index1 >= 0 && index1 < manager->num_tasks &&
+        index2 >= 0 && index2 < manager->num_tasks) {
+        Task temp = manager->tasks[index1];
+        manager->tasks[index1] = manager->tasks[index2];
+        manager->tasks[index2] = temp;
+        printf("Tasks swapped successfully!\n");
+    }
+    else {
+        printf("Invalid task indices.\n");
+    }
+}
+
 //saves the list do the text file -By Alaba
 void save_tasks(TaskManager* manager) {
     FILE* file = fopen(FILENAME, "w");
@@ -182,7 +213,6 @@ void save_tasks(TaskManager* manager) {
         printf("Error: Unable to save tasks to file.\n");
     }
 }
-
 
 
 // loads the list from the text file -By Alaba
