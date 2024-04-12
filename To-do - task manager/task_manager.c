@@ -171,6 +171,7 @@ bool search_task(TaskManager* manager) {
     return found;
 }
 
+// Re_order Fuction to take Two Task Id's And Switch their Places -BY Alaba Ibukunoluwa
 void reorder_tasks(TaskManager* manager) {
     if (manager->num_tasks <= 1) {
         printf("Not enough tasks to reorder.\n");
@@ -189,6 +190,8 @@ void reorder_tasks(TaskManager* manager) {
     }
 }
 
+
+// The swap function called in the main file, It Makes Use of the reorder function - BY Alaba Ibukunoluwa
 void swap_tasks(TaskManager* manager, int index1, int index2) {
     if (index1 >= 0 && index1 < manager->num_tasks &&
         index2 >= 0 && index2 < manager->num_tasks) {
@@ -202,7 +205,7 @@ void swap_tasks(TaskManager* manager, int index1, int index2) {
     }
 }
 
-//saves the list do the text file -By Alaba
+//saves the list do the text file -By Alaba Ibukunoluwa
 void save_tasks(TaskManager* manager) {
     FILE* file = fopen(FILENAME, "w");
     if (file != NULL) {
@@ -215,7 +218,7 @@ void save_tasks(TaskManager* manager) {
 }
 
 
-// loads the list from the text file -By Alaba
+// loads the list from the text file -By Alaba Ibukunoluwa
 void load_tasks(TaskManager* manager) {
     FILE* file = fopen(FILENAME, "r");
     if (file != NULL) {

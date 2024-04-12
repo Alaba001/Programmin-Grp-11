@@ -1,5 +1,7 @@
 Team Task Manager Project
 
+This Program is an Implementation of a simple task manager that allows users to add, delete, swap, update and search tasks. It is a solution Consisting of different header and Implementation(.c) files like the main.c, menu.c, task_manager.c and their respective (.h) files. Users Can easily Interact with this program through a manu-based interface, here, they select different diffrent options of which they perform specific tasks. 
+
 
 Division of Labor
 
@@ -22,6 +24,8 @@ Tasks:
 	Range of Tasks Function
 	Save to Disk Function
 	Load from Disk Function
+	Re-order And swapping Functions
+
 
 Development Process:
 During our first meeting, we collectively decided to work on a Task Manager program. We allocated responsibilities according to each member's expertise and interest. Throughout the development phase, we maintained communication and shared code snippets to address challenges and ensure consistent progress.
