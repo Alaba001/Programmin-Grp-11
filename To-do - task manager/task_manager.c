@@ -190,8 +190,7 @@ void reorder_tasks(TaskManager* manager) {
     }
 }
 
-
-// The swap function called in the main file, It Makes Use of the reorder function - BY Alaba Ibukunoluwa
+The swap function called in the main file, It Makes Use of the reorder function -BY Alaba Ibukunoluwa
 void swap_tasks(TaskManager* manager, int index1, int index2) {
     if (index1 >= 0 && index1 < manager->num_tasks &&
         index2 >= 0 && index2 < manager->num_tasks) {
